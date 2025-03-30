@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quantum Well Simulator</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #222;
+      color: #fff;
+      font-family: sans-serif;
+    }
+    #controls {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 10px;
+      border-radius: 4px;
+    }
+    #potentialCanvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #333;
+      cursor: crosshair;
+    }
+    #waveCanvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none; /* waveCanvas is for visualization only */
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <button id="startSimBtn">Start Simulation</button>
+    <button id="resetSimBtn">Reset</button>
+    <p>Draw potential on the lower canvas, then click <em>Start</em>.</p>
+  </div>
+
+  <!-- Two layered canvases: one for drawing the potential, one for drawing the wavefunction -->
+  <canvas id="potentialCanvas" width="800" height="400"></canvas>
+  <canvas id="waveCanvas" width="800" height="400"></canvas>
+
+  <!-- Socket.io script -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Main logic -->
+  <script src="main.js"></script>
+</body>
+</html>
