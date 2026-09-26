@@ -1,0 +1,12 @@
+.DS_Store
+.claude/
+_to_delete/
+DELETE_BEFORE_UPLOAD/
+.writetest
+*.aux
+*.log
+*.blg
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
